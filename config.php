@@ -22,7 +22,7 @@ $projects_list = [
         'img' => '/dist/images/3is.jpg',
         'subhead' => 'Conception-Creation-Direction Technique @ <a href="https://www.rnd.fr/" target="_blank">RnD</a>',
         'tags' => '#Wordpress #GSAP',
-        'content' => 'Développement de la galeries des projets en AJAX, certaines pages, et de fonctions custom pour wordpress.',
+        'content' => 'Développement de la galerie des projets en AJAX, certaines pages, et de fonctions custom pour wordpress.',
         'url' => 'https://www.3is.fr/'
     ],
     'inseec' => [
@@ -30,7 +30,7 @@ $projects_list = [
         'subhead' => 'Conception-Creation-Direction Technique @ <a href="https://www.octaveoctave.com/fr/" target="_blank">OctaveOctave</a>',
         'img' => '/dist/images/inseec.jpg',
         'tags' => '#Wordpress #GSAP #VanillaJS',
-        'content' => 'Développemement front-end du site, utilisations des apis VanillaJS comme IntersectionObserver',
+        'content' => 'Développement front-end du site, utilisation des APIs VanillaJS comme IntersectionObserver',
         'url' => 'https://grandeecole.inseec.com/'
     ],
     'laposte' => [
@@ -38,7 +38,7 @@ $projects_list = [
         'subhead' => 'Conception-Creation-Direction Technique @ <a href="https://www.rnd.fr/" target="_blank">RnD</a>',
         'img' => '/dist/images/laposte.jpg',
         'tags' => '#GSAP #Javascript #SVG',
-        'content' => 'Jeux type instant gagnant. Développement du labyrinthe et de la roue de la fortune en JS, via GSAP.',
+        'content' => 'Jeu type instant gagnant. Développement du labyrinthe et de la roue de la fortune en JS, avec GSAP.',
         'url' => 'https://contrelamontre.laposte.fr/'
     ],
     'poip' => [
