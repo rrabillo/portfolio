@@ -1,0 +1,91 @@
+html{
+  box-sizing: border-box;
+  font-size: rem($browser-context);
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  @include antialiased;
+  overflow-x: hidden;
+  @extend %MontSerrat;
+  color:$turquoise;
+  position: relative;
+  &.is-none{
+    //pointer-events: none;
+    cursor: none;
+  }
+  &.is-wait{
+    cursor: wait !important;
+    *{
+      pointer-events: none;
+    }
+  }
+  @include media-breakpoint-down(md){
+    //padding-top: 32px;
+  }
+}
+.bubble{
+  position: fixed;
+  top:50px;
+  right:50px;
+  background-image: url("../images/svg/bubble.svg");
+  background-size: cover;
+  width: 203px;
+  height: 143px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: bottom left;
+  span{
+    margin-top: -25px;
+  }
+}
+.js-bubble-trigger{
+  &:hover{
+    cursor: none;
+  }
+}
+.js-text-scroll{
+  overflow: hidden;
+  display: inline-flex;
+  span{
+    display: inline-flex;
+    transform: translateY(100%);
+  }
+}
+.scroll-down{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  font-size: 16px;
+  color: $turquoise;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  transition: all 250ms;
+  opacity: 0;
+  pointer-events: none;
+  &.is-shown{
+    opacity: 1;
+  }
+}
+.back-home{
+  position: absolute;
+  top:25px;
+  left:25px;
+  font-size: rem(24);
+  color:$turquoise;
+  transition: all 250ms;
+  &:hover{
+    color:$grey;
+    text-decoration: none;
+  }
+}

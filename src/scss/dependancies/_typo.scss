@@ -1,0 +1,38 @@
+%MontSerrat{
+  font-family: 'Montserrat';
+}
+.primary-text{
+  @extend %MontSerrat;
+  font-size: rem(16);
+  line-height: rem(22);
+}
+.font-weight-semi-bold{
+  font-weight: 600;
+}
+.has-underline{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  &:after{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left:0;
+    height: 3px;
+    background-color: $turquoise;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 250ms $easeOutP1;
+  }
+  &:hover{
+    &:after{
+      transform: scaleX(1);
+    }
+  }
+  &.underline-dark{
+    &:after{
+      background-color: $dark;
+    }
+  }
+}

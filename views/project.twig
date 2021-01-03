@@ -1,0 +1,44 @@
+
+{% extends "layout.twig" %}
+
+{% block page %}
+    <div class="pjax-wrapper" data-page="project">
+        <a href="/" class="back-home pjax-link">
+            <i class="ri-home-4-line"></i>
+        </a>
+        <div class="project-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="project-main__img">
+                            <img src="{{ site_url }}{{ projects_list[current].img }}" alt="Image projet {{ projects_list[current].title }}">
+                            <div class="project-main__img__overlay"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-right">
+                        <h1 class="project-main__title">{{ projects_list[current].title }}</h1>
+                        <p class="project-main__subhead">{{ projects_list[current].subhead|raw }}</p>
+                        <p class="project-main__tags">{{ projects_list[current].tags }}</p>
+                        <p class="project-main__content">{{ projects_list[current].content }}</p>
+                        <a href="{{ projects_list[current].url }}" class="project-main__url" target="_blank">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects-blocks">
+        <div class="container">
+            <div class="row">
+                {% for key, project in projects_list %}
+                    {% if key != current %}
+                        <div class="col-lg-3 col-md-6">
+                            <a href="/{{ key }}" class="projects-blocks__item pjax-link" style="background-image: url('{{ site_url }}{{ project.img }}');">
+                                <div class="projects-blocks__item__text">{{ project.title }}</div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

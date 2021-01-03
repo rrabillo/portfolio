@@ -1,0 +1,38 @@
+/* Colors */
+$white:#FFF;
+$black:#000000;
+$dark:#333536;
+$grey:#4E5964;
+$turquoise:#6CB4BC;
+
+$colors: (
+  'white':$white,
+  'black':$black,
+  'dark':$dark,
+  'grey':$grey,
+  'turquoise':$turquoise,
+);
+
+// Build class utils
+@each $name, $var in $colors {
+  .color-#{$name}{
+    color:$var;
+    &:hover{
+      color:$var;
+    }
+  }
+  .section-content .color-#{$name}{
+    color:$var;
+    &:hover{
+      color:$var;
+    }
+  }
+  .bg-#{$name}{
+    background-color:$var;
+  }
+}
+@mixin small-screen {
+  @media (max-width : 1279px) {
+    @content;
+  }
+}

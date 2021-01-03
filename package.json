@@ -1,0 +1,40 @@
+{
+  "name": "Starter",
+  "version": "1.0.0",
+  "description": "Starter",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Rabillon @ Thalamus",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@splidejs/splide": "^2.4.14",
+    "body-scroll-lock": "^3.1.5",
+    "del": "^5.1.0",
+    "gsap": "file:gsap-bonus.tgz",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dependents": "^1.2.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "lottie-web": "^5.7.3",
+    "popper.js": "^1.16.1",
+    "remixicon": "^2.5.0",
+    "virtual-scroll": "^1.5.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "plyr": "^3.6.2"
+  }
+}

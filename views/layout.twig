@@ -1,0 +1,17 @@
+{# layout.twig #}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../dist/css/style.css" type="text/css">
+    <title>{{ html_title }}</title>
+</head>
+<body class="{{ bgclass }}">
+    <div class="site-wrapper">
+        {% block page %}{% endblock %}
+    </div>
+    <div class="transition-layer"></div>
+<script src="../dist/js/all.js"></script>
+</body>
+</html>

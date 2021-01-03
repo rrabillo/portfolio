@@ -1,0 +1,71 @@
+.projects-list{
+  position: relative;
+  transform:translate(0px); // IOS Safari z-index bug
+  li{
+    position: relative;
+    @include media-breakpoint-down(lg){
+      font-size: rem(40);
+      line-height: rem(42);
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &.has-underline{
+        &:after{
+          display: none;
+        }
+      }
+    }
+    @include media-breakpoint-down(md){
+      font-size: rem(24);
+      line-height: rem(46);
+      flex-flow: column;
+      justify-content: center;
+      margin-bottom: rem(20);
+    }
+    &:hover{
+      .projects-list__bg{
+        opacity: 1;
+        transform: translateY(-30%) rotateX(40deg) rotateY(-18deg) rotateZ(30deg);
+        @include media-breakpoint-down(lg){
+          transform: translateY(0%) rotateX(40deg) rotateY(-18deg) rotateZ(30deg);
+        }
+      }
+    }
+  }
+  &__bg{
+    position: absolute;
+    top:50%;
+    left:calc(100% + 50px);
+    transform: translateY(-0%) rotateX(40deg) rotateY(-18deg) rotateZ(30deg);
+    width: 240px;
+    height: 135px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 11px 10px 30px 0 rgba(0,0,0,.4);
+    opacity: 0;
+    transition: all 250ms $easeOutP1;
+    flex-shrink: 0;
+    @include media-breakpoint-down(lg){
+      opacity: 1;
+      transform: translateY(0%) rotateX(40deg) rotateY(-18deg) rotateZ(30deg);
+      position: relative;
+      top:0;
+      left:0;
+    }
+    @include media-breakpoint-down(md){
+      margin-top: rem(20);
+    }
+  }
+  &__line{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+  }
+}

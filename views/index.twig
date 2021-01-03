@@ -1,0 +1,110 @@
+{# index.twig #}
+{% extends "layout.twig" %}
+
+{% block page %}
+    <div class="pjax-wrapper" data-page="home">
+        <header>
+            <div class="header-top">{ Richard<span class="color-dark">R</span> }</div>
+            <div class="header-bottom"><span class="js-text-update">Wordpress</span><span class="color-dark js-text-update-blink">_</span></div>
+        </header>
+        {% include 'parts/site-intro.twig' %}
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <section class="section-content js-site-intro-first">
+                        <p>
+                            Je m’appelle <span class="color-dark font-weight-semi-bold js-bubble-trigger js-text-scroll"><span>Richard</span></span> et
+                            je suis développeur web
+                            <span class="color-dark font-weight-semi-bold js-bubble-trigger js-text-scroll"><span>freelance</span></span>
+                        </p>
+                    </section>
+                    <section class="section-content">
+                        <p>
+                            Plutôt orienté <span class="color-dark font-weight-semi-bold js-bubble-trigger js-text-scroll"><span>front-end</span></span>
+                            je bricole sur plusieurs
+                            <span class="color-dark font-weight-semi-bold js-bubble-trigger js-text-scroll"><span>technos</span></span> !
+                        </p>
+                    </section>
+                    <section class="section-content">
+                        <p>
+                            Jetez un oeil à certains de mes
+                            <span class="color-dark font-weight-semi-bold js-scrollto js-text-scroll" data-target="projects">
+                                    <span class="has-underline underline-dark">projets</span>
+                                </span> ou
+                            <span class="color-dark font-weight-semi-bold js-scrollto js-text-scroll" data-target="contact">
+                                    <span class="has-underline underline-dark ">contactez moi</span>
+                                </span>
+                        </p>
+                    </section>
+                    <section class="section-content projects-list js-projects-list" id="projects">
+                        <ul>
+                            <li class="has-underline">
+                                <a href="/laposte" class="pjax-link">
+                                    <span class="projects-list__line bg-turquoise js-projects-list-line"></span>
+                                    I. Jeu concours Laposte
+                                    <div class="projects-list__bg" style="background-image: url('{{ site_url }}/dist/images/laposte.jpg')">
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="color-dark has-underline underline-dark">
+                                <a href="/poip" class="pjax-link color-dark">
+                                    <span class="projects-list__line bg-dark js-projects-list-line"></span>
+                                    II. Université Corse
+                                    <div class="projects-list__bg" style="background-image: url('{{ site_url }}/dist/images/poip.jpg')">
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="has-underline">
+                                <a href="/ppia" class="pjax-link">
+                                    <span class="projects-list__line bg-turquoise js-projects-list-line"></span>
+                                    III. Perspectives-IA
+                                    <div class="projects-list__bg" style="background-image: url('{{ site_url }}/dist/images/ppia.jpg')">
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="color-dark has-underline underline-dark">
+                                <a href="/inseec" class="pjax-link color-dark">
+                                    <span class="projects-list__line bg-dark js-projects-list-line"></span>
+                                    IV. Inseec
+                                    <div class="projects-list__bg" style="background-image: url('{{ site_url }}/dist/images/inseec.jpg')">
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="has-underline">
+                                <a href="/3is" class="pjax-link">
+                                    <span class="projects-list__line bg-turquoise js-projects-list-line"></span>
+                                    V. 3IS
+                                    <div class="projects-list__bg" style="background-image: url('{{ site_url }}/dist/images/3is.jpg')">
+
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="section-content contact-block" id="contact">
+                        <p>
+                            <a href="mailto:richard.rabillon@live.fr" class="has-underline">richard.rabillon@live.fr</a>
+                        </p>
+                        <p class="contact-block__icons">
+                            <a href="https://github.com/rrabillo" target="_blank"><i class="ri-github-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/richard-rabillon-95177aba/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="bubble js-bubble">
+            <span>
+            Depuis 1 an !
+            </span>
+        </div>
+        <div class="scroll-down js-scroll-down">
+            Scrollez !
+            <i class="ri-mouse-line"></i>
+        </div>
+    </div>
+{% endblock %}

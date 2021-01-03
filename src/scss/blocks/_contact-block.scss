@@ -1,0 +1,17 @@
+.contact-block{
+  text-align: center;
+  @include media-breakpoint-down(md){
+    font-size: rem(24);
+  }
+  p.contact-block__icons{
+    font-size: rem(30);
+    line-height: rem(32);
+    margin-top: rem(20);
+    a{
+      transition: all 500ms;
+      &:hover{
+        color:$dark;
+      }
+    }
+  }
+}

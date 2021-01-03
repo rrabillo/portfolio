@@ -1,0 +1,38 @@
+header{
+  position: fixed;
+  top:30px;
+  left:30px;
+  font-size: rem(38);
+  line-height: rem(58);
+  z-index: 99;
+  @include media-breakpoint-down(lg){
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    background: $grey;
+    box-shadow: 0px 1px 8px 0 rgba(0,0,0,0.2);
+  }
+  @include media-breakpoint-down(md){
+    font-size: rem(22);
+    line-height: rem(22);
+    padding: 5px;
+  }
+  .header-top{
+    margin-bottom: rem(30);
+    @include media-breakpoint-down(lg){
+      margin-bottom: 0;
+    }
+  }
+  .js-text-update-blink{
+    display: inline-block;
+    animation: blinker 1s step-start infinite;
+  }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
