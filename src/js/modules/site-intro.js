@@ -49,7 +49,7 @@ export default class SiteIntro{
                 resizeTimer = setTimeout(() => {
 
                     Draggable.get(this.$line).kill();
-                    this.init();
+                    this.initAnim();
                 }, 250);
             }
         });
